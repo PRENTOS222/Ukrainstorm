@@ -1,0 +1,108 @@
+import { MissionDef } from '../types';
+
+export const MISSIONS: MissionDef[] = [
+  {
+    id: 'kyiv_night',
+    sectorName: {
+      uk: 'Сектор «Київська Фортеця»',
+      ru: 'Сектор «Киевская Крепость»',
+      en: 'Sector "Kyiv Citadel"',
+    },
+    subtitle: {
+      uk: 'Нічне перехоплення ударних дронів над столицею',
+      ru: 'Ночной перехват ударных дронов над столицей',
+      en: 'Night interception of strike drones over the capital',
+    },
+    briefing: {
+      uk: 'Розвідка фіксує рух групи БПЛА «Shahed-136» з північного напрямку у бік об’єктів критичної інфраструктури Києва. Підніміть перехоплювач у повітря та захистіть місто!',
+      ru: 'Разведка фиксирует движение группы БПЛА «Shahed-136» с северного направления в сторону объектов критической инфраструктуры. Поднимите перехватчик в воздух и защитите город!',
+      en: 'Radar detects a swarm of Shahed-136 drones approaching Kyiv critical energy grid. Scramble your interceptor and protect the city!',
+    },
+    difficulty: 'normal',
+    targetKills: 15,
+    rewardCredits: 1200,
+    rewardXp: 800,
+    spawnInterval: 2400,
+    allowedEnemies: ['shahed136', 'scout_drone'],
+    cityDefenseHp: 100,
+    backgroundTheme: 'kyiv_night',
+  },
+  {
+    id: 'black_sea',
+    sectorName: {
+      uk: 'Сектор «Чорноморський Щит»',
+      ru: 'Сектор «Черноморский Щит»',
+      en: 'Sector "Black Sea Shield"',
+    },
+    subtitle: {
+      uk: 'Морський рубіж оборони Одеси та портів',
+      ru: 'Морской рубеж обороны Одессы и портов',
+      en: 'Maritime air defense of coastal ports and hubs',
+    },
+    briefing: {
+      uk: 'Масований запуск швидкісних реактивних шахедів та крилатих ракет над акваторією Чорного моря на наднизькій висоті. Використовуйте форсаж та теплові ракети.',
+      ru: 'Массированный запуск скоростных реактивных шахедов и крылатых ракет над акваторией Черного моря на предельно низкой высоте. Используйте форсаж и ракеты.',
+      en: 'Massed low-altitude wave of jet-powered Shaheds and cruise missiles inbound over the Black Sea waters. Use afterburners and missiles to hunt them down.',
+    },
+    difficulty: 'hard',
+    targetKills: 22,
+    rewardCredits: 2200,
+    rewardXp: 1500,
+    spawnInterval: 1900,
+    allowedEnemies: ['shahed136', 'shahed238_jet', 'cruise_missile'],
+    cityDefenseHp: 120,
+    backgroundTheme: 'black_sea_dawn',
+  },
+  {
+    id: 'east_bastion',
+    sectorName: {
+      uk: 'Сектор «Східна Брама»',
+      ru: 'Сектор «Восточные Врата»',
+      en: 'Sector "Eastern Bastion"',
+    },
+    subtitle: {
+      uk: 'Харківсько-Дніпровський повітряний коридор',
+      ru: 'Харьковско-Днепровский воздушный коридор',
+      en: 'High-intensity drone saturation corridor',
+    },
+    briefing: {
+      uk: 'Максимальна щільність цілей: комбінований наліт розвідувальних дронів, реактивних «шахедів» та високошвидкісних крилатих ракет. Потрібна найвища точність вогню.',
+      ru: 'Максимальная плотность целей: комбинированный налет дронов-разведчиков, реактивных «шахедов» и крылатых ракет. Требуется предельная меткость огня.',
+      en: 'Maximum saturation attack: mixed wave of scout drones, jet kamikazes, and high-speed cruise missiles. Peak marksmanship required.',
+    },
+    difficulty: 'extreme',
+    targetKills: 30,
+    rewardCredits: 3600,
+    rewardXp: 2600,
+    spawnInterval: 1400,
+    allowedEnemies: ['shahed136', 'shahed238_jet', 'scout_drone', 'cruise_missile'],
+    cityDefenseHp: 150,
+    backgroundTheme: 'kharkiv_storm',
+  },
+  {
+    id: 'endless_patrol',
+    sectorName: {
+      uk: 'Режим «Незламна Варта»',
+      ru: 'Режим «Несокрушимый Дозор»',
+      en: 'Mode "Undefeated Patrol"',
+    },
+    subtitle: {
+      uk: 'Нескінченне нічне чергування до останнього набою',
+      ru: 'Бесконечное ночное дежурство до последнего патрона',
+      en: 'Endless night watch with escalating drone waves',
+    },
+    briefing: {
+      uk: 'Постійне бойове патрулювання! Хвилі шахедів будуть нарощувати швидкість та кількість. Заробляйте максимум досвіду та кредитів для прокачки літаків.',
+      ru: 'Постоянное боевое патрулирование! Волны шахедов будут наращивать темп и численность. Зарабатывайте максимум опыта и кредитов для прокачки.',
+      en: 'Constant combat patrol! Incoming drone waves will escalate in speed and numbers. Earn maximum XP and credits to upgrade and unlock next-gen fighters.',
+    },
+    difficulty: 'endless',
+    targetKills: 9999,
+    rewardCredits: 5000,
+    rewardXp: 4000,
+    spawnInterval: 1800,
+    allowedEnemies: ['shahed136', 'shahed238_jet', 'scout_drone', 'cruise_missile'],
+    cityDefenseHp: 200,
+    backgroundTheme: 'kyiv_night',
+  },
+];
